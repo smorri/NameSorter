@@ -1,5 +1,3 @@
-package com.examples.coding;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -20,7 +18,7 @@ import java.util.Scanner;
  * 
  * @author  Samone Morris
  * @version 1.0.0
- * @done	10/05/17
+ * @done    10/05/17
  * ========================================================================================================
  */
 
@@ -30,12 +28,12 @@ public class NameSorter {
 	/** =============================================================================================== **/		
 	private ArrayList<String> names;
 	
-	private byte sort_state;					// For efficiency-sake, I do not want to perform a				
+	private byte sort_state;			// For efficiency-sake, I do not want to perform a				
 	private final byte STATE_EMPTY = -1,		// a sort task on list of names, that I have already
-					   STATE_UNSORTED = 0,		// sorted. I should only sort a list of names
-				  	   STATE_SORTED = 1,		// when 1 or more names have been inputed and 
-				  	   ORDER_ASCENDING = 2,		// successfully stored. These states should help
-				  	   ORDER_DESCENDING = 3;	// prevent this problem.
+			   STATE_UNSORTED = 0,		// sorted. I should only sort a list of names
+			   STATE_SORTED = 1,		// when 1 or more names have been inputed and 
+			   ORDER_ASCENDING = 2,		// successfully stored. These states should help
+			   ORDER_DESCENDING = 3;	// prevent this problem.
 	
 	/** =============================================================================================== **/
 	/** ======================================== CONSTRUCTORS ========================================= **/
@@ -66,9 +64,9 @@ public class NameSorter {
 		}// end if
 		
 		StringBuilder fullName = new StringBuilder()
-									.append(firstName + " ")
-									.append(middleName + " ")
-									.append(lastName);
+						.append(firstName + " ")
+						.append(middleName + " ")
+						.append(lastName);
 				
 		names.add( fullName.toString() );
 		System.out.println("\n[SUCCESS] Added name : " + fullName.toString() + "\n");
@@ -174,7 +172,7 @@ public class NameSorter {
 			switch( input.charAt(0) ){
 				case 'E' : add(scanner, sorter);	break;
 				case 'S' : sort(scanner, sorter);	break;
-				case 'Q' : quit = true;				break;
+				case 'Q' : quit = true;			break;
 				default  : System.out.println("\n[!] Enter a valid command. Returning to Main Menu");
 			}// end switch
 			
